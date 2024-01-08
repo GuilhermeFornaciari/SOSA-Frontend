@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { StudentService } from '../../../services/student/student.service';
 
 @Component({
   selector: 'app-students',
@@ -7,5 +8,6 @@ import { Component } from '@angular/core';
   templateUrl: './students.component.html',
 })
 export class StudentsComponent {
+  constructor(private studentService:StudentService){}
 
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ExitService } from '../../../services/exit/exit.service';
 
 @Component({
   selector: 'app-exits',
@@ -7,5 +8,6 @@ import { Component } from '@angular/core';
   templateUrl: './exits.component.html',
 })
 export class ExitsComponent {
+  constructor(private exitService: ExitService){}
 
 }

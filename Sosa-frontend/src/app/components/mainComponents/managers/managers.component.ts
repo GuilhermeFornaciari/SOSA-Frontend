@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { SidebarComponent } from '../../sidebar/sidebar.component';
+import { ManagerService } from '../../../services/manager/manager.service';
+import { Manager } from '../../../Types/Manager';
 
 @Component({
   selector: 'app-main-managers',
@@ -7,16 +9,10 @@ import { SidebarComponent } from '../../sidebar/sidebar.component';
   imports: [SidebarComponent],
   templateUrl: './managers.component.html',
 })
-export class ManagersComponent {
-  managers: Array<ManagerDTO> = [{
-    name: "Manager1",
-    type: "CAED",
-    id: "123"
-  }
-  ]
+export class ManagersComponent implements OnInit {
+  constructor(private managerService:ManagerService){}
+  managers: Array<Manager> = []
+  ngOnInit(): void {
+  // fazer a requisição HTTP aki
 }
-type ManagerDTO = {
-  name: string,
-  type:string,
-  id:string
 }
