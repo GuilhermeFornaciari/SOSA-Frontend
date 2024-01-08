@@ -1,0 +1,21 @@
+<div class="w-full h-screen bg-sky-400 flex justify-center content-center items-center">
+  <main class="w-full max-w-md h-fit bg-sky-100 rounded-3xl ring-2 ring-inset ring-cyan-500" >
+    <form  class="p-6 flex flex-col gap-4 rounded-lg items-center" [formGroup]="form"  (ngSubmit) = "onSubmit()">
+      <h2 class="font-semibold text-sky-950 text-center mb-8">Página de login - SOSA</h2>
+      <h4 class="text-sky-900 mb-4">Sistema de otimização de saída de alunos</h4>
+      <div class="text-sky-900 flex flex-col w-72  ">
+
+        <label>Username: </label>
+        <input type="text" class="h-12 w-full max-w-72 ring-1 ring-inset ring-sky-400 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 focus:outline-none rounded-xl pl-5" placeholder="Username" formControlName="username" required >
+      </div>
+      <div class="text-sky-900 flex flex-col w-72 mb-4 ">
+        <label>Senha: </label>
+        <input type="password" class="h-12 w-full max-w-72 ring-1 ring-inset ring-sky-400 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 focus:outline-none rounded-xl pl-5 " placeholder="Senha" formControlName="password" required>
+      </div>
+        <button type="submit" class="h-10 w-full max-w-72 bg-sky-400 rounded-3xl ring-1 ring-inset ring-cyan-500 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sky-900 mb-6 disabled:bg-sky-200" [disabled]="!form.valid">Entrar</button>
+    </form>
+
+
+
+  </main>
+</div>

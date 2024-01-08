@@ -1,0 +1,14 @@
+<nav class="w-full h-screen bg-sky-300 " (pointerover)="sidebarState.set('open')" (pointerout)="sidebarState.set('closed')">
+  <ul class="w-full h-full p-4 flex flex-col justify-around">
+    @for (item of navsItens; track $index) {
+      <li class="mb-4">
+        <a [href]="item.href">
+          <figure>
+            <img [src]="item.imageSource" [alt]="item.alt" class="w-8">
+              <figcaption class="text" [@OpenCloseSidebar] = "sidebarState()"  >{{item.text}}</figcaption>
+          </figure>
+        </a>
+      </li>
+    }
+  </ul>
+</nav>

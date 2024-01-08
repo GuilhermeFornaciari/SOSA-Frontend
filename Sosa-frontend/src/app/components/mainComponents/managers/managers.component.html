@@ -1,0 +1,26 @@
+<main>
+
+  @if (!managers.length) {
+    <p>Não há nenhum manager cadastrado</p>
+  }
+  @else {
+    <table>
+      <tr>
+        <th>N°</th>
+        <th>Nome</th>
+        <th>Tipo</th>
+        <th>Excluir</th>
+        <th>Alterar</th>
+      </tr>
+      @for (manager of managers; track $index) {
+        <tr>
+          <td>{{$index + 1}}</td>
+          <td>{{manager.name}}</td>
+          <td>{{manager.type}}</td>
+          <td>{{manager.id}}</td>
+          <td>{{manager.id}}</td>
+        </tr>
+      }
+    </table>
+  }
+</main>
