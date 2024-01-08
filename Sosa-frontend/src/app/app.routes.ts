@@ -9,27 +9,27 @@ import { ManagersComponent } from './components/mainComponents/managers/managers
 
 export const routes: Routes = [
 {
-  path: '',
+  path: 'login',
   component: LoginViewComponent
 },
 {
-  path: 'Main',
+  path: '',
   component: MainViewComponent,
   children: [
     {
-      path: 'Home',
+      path: 'inicial',
       component: HomeComponent
     },
     {
-      path: 'Exits',
+      path: 'saidas',
       component: ExitsComponent
     },
     {
-      path: 'Students',
+      path: 'estudantes',
       component: StudentsComponent
     },
     {
-      path: 'Managers',
+      path: 'servidores',
       component: ManagersComponent
     },
   ],

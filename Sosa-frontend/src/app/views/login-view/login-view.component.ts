@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { SosaApiService } from '../../services/api-services.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-login-view',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, RouterLink],
   templateUrl: './login-view.component.html',
 })
 export class LoginViewComponent {

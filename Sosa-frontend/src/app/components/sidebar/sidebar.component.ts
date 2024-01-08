@@ -1,11 +1,12 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,RouterLink],
   templateUrl: './sidebar.component.html',
   animations: [
     trigger('OpenCloseSidebar', [
@@ -22,28 +23,27 @@ import { Component, signal } from '@angular/core';
   ]
 })
 export class SidebarComponent {
-  sidebarState = signal('open')
   navsItens : Array<navDTO> = [
     {
-      href: 'Main/Home',
+      href: '/inicial',
       imageSource: 'assets/imgs/house.svg',
       text: 'Home',
       alt: 'Pagina Inicial',
     },
     {
-      href: 'Main/Students',
+      href: '/estudantes',
       imageSource: 'assets/imgs/student.svg',
       text: 'Alunos',
       alt: 'Imagem Gerenciamento de alunos',
     },
     {
-      href: 'Main/Exits',
+      href: '/saidas',
       imageSource: 'assets/imgs/door.svg',
-      text: 'Saída de alunos',
+      text: 'Saídas de alunos',
       alt: 'Imagem Saída de alunos',
     },
     {
-      href: 'Main/Managers',
+      href: '/servidores',
       imageSource: 'assets/imgs/person.svg',
       text: 'Servidores',
       alt: 'Imagem Gerenciamento dos servidores',
